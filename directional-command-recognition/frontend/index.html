@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live AI Command Demo</title>
+    <title>AI Pipeline Defense Dashboard</title>
     <style>
         :root {
             --bg-color: #1e1e2e;
             --panel-bg: #282a36;
             --text-color: #f8f8f2;
-            --accent-hubert: #50fa7b;
-            --accent-whisper: #bd93f9;
+            --accent-hubert: #50fa7b; /* Green for Speed */
+            --accent-whisper: #bd93f9; /* Purple for ASR */
+            --warning: #ff5555;
+            --processing: #ffb86c;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,22 +29,25 @@
             background-color: #ff5555;
             color: white;
             border: none;
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            border-radius: 8px;
+            padding: 15px 50px;
+            font-size: 1.4rem;
+            border-radius: 50px;
             cursor: pointer;
             transition: 0.3s;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             user-select: none;
+            box-shadow: 0 4px 15px rgba(255, 85, 85, 0.4);
         }
-        .record-btn.recording { background-color: #ffb86c; animation: pulse 1.5s infinite; }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        .record-btn:hover { transform: scale(1.05); }
+        .record-btn.recording { background-color: var(--processing); animation: pulse 1.5s infinite; }
+        
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
         
         .dashboard {
             display: flex;
             gap: 20px;
             width: 100%;
-            max-width: 900px;
+            max-width: 1000px;
             margin-bottom: 30px;
         }
         .panel {
@@ -50,102 +55,124 @@
             background: var(--panel-bg);
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            display: flex;
-            flex-direction: column;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+            transition: border 0.3s;
         }
-        .panel h3 { margin-top: 0; border-bottom: 2px solid #444; padding-bottom: 10px; }
-        .metric { font-size: 1.1rem; margin: 10px 0; display: flex; justify-content: space-between;}
-        .highlight { font-weight: bold; font-size: 1.3rem; }
+        .panel h3 { margin-top: 0; border-bottom: 1px solid #444; padding-bottom: 10px; font-size: 1.2rem; }
+        .metric { font-size: 1.1rem; margin: 12px 0; display: flex; justify-content: space-between;}
+        .highlight { font-weight: bold; font-size: 1.4rem; }
+        
         #cmd-a { color: var(--accent-whisper); }
         #cmd-b { color: var(--accent-hubert); }
-        .transcription { 
-            font-style: italic; 
-            font-size: 0.9rem; 
-            color: #aaa; 
-            margin-top: 5px;
-            min-height: 1.2rem;
-        }
+        .status-text { font-weight: bold; }
+        .processing-text { color: var(--processing); animation: blink 1s infinite; }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
 
-        .arena {
+        .arena-container {
+            display: flex;
             width: 100%;
-            max-width: 900px;
-            height: 300px;
-            background: #44475a;
+            max-width: 1000px;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .track {
+            flex: 1;
+            height: 350px;
+            background: #21222c;
             border-radius: 12px;
             position: relative;
             overflow: hidden;
+            border: 2px solid #44475a;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 2px solid #6272a4;
+        }
+        .track-label {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            color: rgba(255,255,255,0.3);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 1;
         }
         .robot {
-            width: 60px;
-            height: 60px;
-            background-color: #8be9fd;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             position: absolute;
-            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 32px;
-            box-shadow: 0 0 15px rgba(139, 233, 253, 0.5);
+            font-size: 38px;
+            z-index: 2;
         }
-        
+        .robot-a { background-color: var(--accent-whisper); box-shadow: 0 0 20px var(--accent-whisper); }
+        .robot-b { background-color: var(--accent-hubert); box-shadow: 0 0 20px var(--accent-hubert); }
+
         .log-container {
             width: 100%;
-            max-width: 900px;
-            margin-top: 20px;
+            max-width: 1000px;
             background: var(--panel-bg);
             border-radius: 12px;
-            padding: 15px;
+            padding: 20px;
             max-height: 200px;
             overflow-y: auto;
+            box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
         }
         .log-entry {
             border-bottom: 1px solid #444;
-            padding: 8px 0;
-            font-family: monospace;
-            font-size: 0.9rem;
+            padding: 10px 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: space-between;
         }
-        .log-entry:last-child { border-bottom: none; }
+        .mismatch { border: 2px solid var(--warning) !important; }
     </style>
 </head>
 <body>
 
     <div class="header">
-        <h1>Live Command Recognition</h1>
-        <p>Code-Mixed Sinhala-English Dashboard</p>
+        <h1>Hypothesis Validation: Acoustic vs. ASR Pipelines</h1>
+        <p>Testing Real-Time Latency & Accuracy for Directional Commands</p>
     </div>
 
-    <button id="recordBtn" class="record-btn">Hold to Speak</button>
+    <button id="recordBtn" class="record-btn">HOLD TO COMMAND</button>
 
     <div class="dashboard">
-        <div class="panel" style="border-top: 4px solid var(--accent-whisper);">
-            <h3>Pipeline A: ASR + Semantic</h3>
+        <div class="panel" id="panel-a" style="border-top: 6px solid var(--accent-whisper);">
+            <h3>Pipeline A: Whisper + Semantic</h3>
+            <div class="metric">Status: <span id="status-a" class="status-text">Ready</span></div>
             <div class="metric">Command: <span id="cmd-a" class="highlight">--</span></div>
-            <div id="trans-a" class="transcription">"Waiting for speech..."</div>
             <div class="metric">Confidence: <span id="conf-a">--</span>%</div>
-            <div class="metric">Latency: <span id="lat-a">--</span> ms</div>
+            <div class="metric">Latency: <span id="lat-a" style="color: var(--accent-whisper)">--</span> ms</div>
         </div>
         
-        <div class="panel" style="border-top: 4px solid var(--accent-hubert);">
-            <h3>Pipeline B: Direct Acoustic</h3>
+        <div class="panel" id="panel-b" style="border-top: 6px solid var(--accent-hubert);">
+            <h3>Pipeline B: DistilHuBERT (Acoustic)</h3>
+            <div class="metric">Status: <span id="status-b" class="status-text">Ready</span></div>
             <div class="metric">Command: <span id="cmd-b" class="highlight">--</span></div>
-            <div class="transcription">&nbsp;</div> <!-- Spacer -->
             <div class="metric">Confidence: <span id="conf-b">--</span>%</div>
-            <div class="metric">Latency: <span id="lat-b">--</span> ms</div>
+            <div class="metric">Latency: <span id="lat-b" style="color: var(--accent-hubert)">--</span> ms</div>
         </div>
     </div>
 
-    <div class="arena">
-        <div id="robot" class="robot">🤖</div>
+    <div class="arena-container">
+        <div class="track">
+            <div class="track-label">Whisper Track</div>
+            <div id="robot-a" class="robot robot-a">🤖</div>
+        </div>
+        <div class="track">
+            <div class="track-label">DistilHuBERT Track</div>
+            <div id="robot-b" class="robot robot-b">🤖</div>
+        </div>
     </div>
 
     <div class="log-container">
-        <h3 style="margin-top:0">Event History</h3>
+        <h3 style="margin-top:0">System Event History</h3>
         <div id="historyLog"></div>
     </div>
 
@@ -153,55 +180,61 @@
         const ws = new WebSocket("ws://localhost:8000/ws");
         let mediaRecorder;
         let audioChunks = [];
+        let lastCommandA = "";
+        let lastCommandB = "";
 
-        const robot = document.getElementById('robot');
         const btn = document.getElementById('recordBtn');
         const log = document.getElementById('historyLog');
 
-        function moveRobot(command) {
-            const step = 80;
+        function moveRobot(robotId, command) {
+            const robot = document.getElementById(robotId);
+            const step = 90;
             switch(command.toLowerCase()) {
-                case 'forward':
-                    robot.style.transform = `translateY(-${step}px)`;
-                    break;
-                case 'backward':
-                    robot.style.transform = `translateY(${step}px)`;
-                    break;
-                case 'left':
-                    robot.style.transform = `translateX(-${step * 1.5}px)`;
-                    break;
-                case 'right':
-                    robot.style.transform = `translateX(${step * 1.5}px)`;
-                    break;
-                case 'stop':
-                    robot.style.transform = 'translate(0, 0)';
-                    break;
+                case 'forward':  robot.style.transform = `translateY(-${step}px)`; break;
+                case 'backward': robot.style.transform = `translateY(${step}px)`; break;
+                case 'left':     robot.style.transform = `translateX(-${step}px)`; break;
+                case 'right':    robot.style.transform = `translateX(${step}px)`; break;
+                case 'stop':     robot.style.transform = 'translate(0, 0)'; break;
             }
         }
 
         ws.onmessage = (event) => {
             const data = JSON.parse(event.data);
             
-            // Update Pipeline A
+            // Process Pipeline A (ASR)
+            document.getElementById('status-a').innerText = "Complete";
+            document.getElementById('status-a').classList.remove('processing-text');
             document.getElementById('cmd-a').innerText = data.pipelineA.command.toUpperCase();
             document.getElementById('conf-a').innerText = (data.pipelineA.confidence * 100).toFixed(1);
             document.getElementById('lat-a').innerText = data.pipelineA.latency_ms;
-            document.getElementById('trans-a').innerText = `"${data.pipelineA.transcription}"`;
+            moveRobot('robot-a', data.pipelineA.command);
+            lastCommandA = data.pipelineA.command;
 
-            // Update Pipeline B
+            // Process Pipeline B (Acoustic)
+            document.getElementById('status-b').innerText = "Complete";
+            document.getElementById('status-b').classList.remove('processing-text');
             document.getElementById('cmd-b').innerText = data.pipelineB.command.toUpperCase();
             document.getElementById('conf-b').innerText = (data.pipelineB.confidence * 100).toFixed(1);
             document.getElementById('lat-b').innerText = data.pipelineB.latency_ms;
+            moveRobot('robot-b', data.pipelineB.command);
+            lastCommandB = data.pipelineB.command;
+
+            // Disagreement Highlight
+            if(lastCommandA !== lastCommandB) {
+                document.getElementById('panel-a').classList.add('mismatch');
+                document.getElementById('panel-b').classList.add('mismatch');
+            } else {
+                document.getElementById('panel-a').classList.remove('mismatch');
+                document.getElementById('panel-b').classList.remove('mismatch');
+            }
 
             // Log entry
             const entry = document.createElement('div');
             entry.className = 'log-entry';
-            const timestamp = new Date().toLocaleTimeString();
-            entry.innerText = `[${timestamp}] A: ${data.pipelineA.command} (${data.pipelineA.latency_ms}ms) | B: ${data.pipelineB.command} (${data.pipelineB.latency_ms}ms)`;
+            entry.innerHTML = `<span>[${new Date().toLocaleTimeString()}]</span> 
+                               <span>A: ${data.pipelineA.command} (${data.pipelineA.latency_ms}ms)</span>
+                               <span>B: ${data.pipelineB.command} (${data.pipelineB.latency_ms}ms)</span>`;
             log.prepend(entry);
-
-            // Move robot based on Pipeline A (usually more accurate)
-            moveRobot(data.pipelineA.command);
         };
 
         // Mic Capture
@@ -217,18 +250,24 @@
                 if (ws.readyState === WebSocket.OPEN) {
                     ws.send(audioBlob);
                 }
+                
+                // Trigger Visual "Processing" state immediately
+                document.getElementById('status-a').innerText = "Processing...";
+                document.getElementById('status-a').classList.add('processing-text');
+                document.getElementById('status-b').innerText = "Processing...";
+                document.getElementById('status-b').classList.add('processing-text');
+                
                 audioChunks = [];
             };
         }).catch(err => {
             console.error("Mic access denied.", err);
-            alert("Please allow microphone access to use the demo.");
+            alert("Microphone access is required for the live defense demo.");
         });
 
         btn.addEventListener('mousedown', () => {
             if (mediaRecorder && mediaRecorder.state === "inactive") {
                 btn.classList.add('recording');
-                btn.innerText = "Listening...";
-                audioChunks = [];
+                btn.innerText = "LISTENING...";
                 mediaRecorder.start();
             }
         });
@@ -236,24 +275,12 @@
         btn.addEventListener('mouseup', () => {
             if (mediaRecorder && mediaRecorder.state === "recording") {
                 btn.classList.remove('recording');
-                btn.innerText = "Analyzing...";
+                btn.innerText = "WAITING...";
                 mediaRecorder.stop();
                 setTimeout(() => {
-                    if (!btn.classList.contains('recording')) {
-                        btn.innerText = "Hold to Speak";
-                    }
-                }, 1000);
+                    if (!btn.classList.contains('recording')) btn.innerText = "HOLD TO COMMAND";
+                }, 1500);
             }
-        });
-
-        // Touch support
-        btn.addEventListener('touchstart', (e) => {
-            e.preventDefault();
-            btn.dispatchEvent(new Event('mousedown'));
-        });
-        btn.addEventListener('touchend', (e) => {
-            e.preventDefault();
-            btn.dispatchEvent(new Event('mouseup'));
         });
 
     </script>
