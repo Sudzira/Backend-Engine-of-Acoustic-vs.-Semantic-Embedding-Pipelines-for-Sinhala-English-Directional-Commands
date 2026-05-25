@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Large Model Weights (ENABLED)
+# We are now including .pt, .pth, and .bin files as requested
+# *.pt
+# *.pth
+# *.bin
+
+# Large Audio/Archive Files (ENABLED)
+# We are now including .wav and .mp3 files as requested
+# *.wav
+# *.mp3
+
+# Ignore generic archives and huge system files
+*.zip
+*.tar.gz
+*.7z
+*.safetensors
+
+# Folder specific ignores
+# (None for now to ensure everything is captured)
+
+# Un-ignore metadata and structural files
+!*.csv
+!*.ipynb
+!*.txt
+!*.md
+!*.json
+!*.png
+!*.jpg
+!*.html
+!*.css
+!*.js
+
+# Ignore local IDE settings
+.vscode/
+.idea/

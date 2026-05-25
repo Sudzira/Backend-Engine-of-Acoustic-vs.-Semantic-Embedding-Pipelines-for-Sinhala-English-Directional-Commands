@@ -1,0 +1,381 @@
+path,raw_whisper,status
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(59).wav,තිකෙ තෙන්ටු ලෙව්ට් ව�,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(12).wav,නව තින්නවාය කරන් පොසි,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(56).wav,මොතින්වක් අරන් පොතින,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(41).wav,අවැතින්නවාය කරන් පොළ,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(24).wav,ත්තෙක් අත්තු රැයි ඔයා,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(47).wav,ත්ටු ර්යිට් ඔයා දැංින,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(25).wav,චෙගට ඇන්ටුව රයිට ඔයාග,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(47).wav,ඉන්න ඔයාගේ කරන් පොසිෂ,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(51).wav,ඉස්සරහරය අන්න ස්රේද �,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(34).wav,නවැතින් නොවාගේ කරන් ප,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(4).wav,පිටිවසරැන්නස්ට්ලයි,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(75).wav,තිටිවසටයන්න ස්ට්රේ�,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(23).wav,ටයෙක තොන්තු රැයි ඔයා ද,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(58).wav,ඉස්ස රහටය අන්න ඉනස්ට්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(5).wav,නව තින්න ඔයාගේ කරන්පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(25).wav,නාවතින්නේ ඔයාගෙක් පර,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(22).wav,පිටපැස්සර යන්න ස්ට්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(56).wav,ටේක තොන්ට ලෑව්ට් ඔයා ද,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(68).wav,නවතින්න ඔය අගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(47).wav,පිටි බසදෙන්න ස්ඪැටල�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(52).wav,ඔයාගෙක් කරන්පොස්චන්,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(63).wav,තෙක්ක තොන්තුල් ලෙව් ක,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(3).wav,නවතින්න ඔහාගේ කරන් පස,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(25).wav,ටේක් ටොයන්ටුල්වට් ව�,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(30).wav,නවුතින් ආගි පොස්යෙන්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(33).wav,පෙරිපසට යන්න ඉස්රැට්,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(42).wav,තෙක තොන්ටු රායිට් ඔන්,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(63).wav,ිටිපස්සරයන්න ස්රේර�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(10).wav,ට්කට්ටු ලෙව්ට් ඔන් ඉන,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(8).wav,ටේක් ටොන්තු ලෙප්ට් ඔය,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(74).wav,තේක තොරන්ටු රයිට් ඔය ද,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(35).wav,පිටිපස්තර යන්න ඉස්ට්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(21).wav,තෙක ටොටුර් රායිට් වා�,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(15).wav,තෙක තොරන්ටු රැයිටුවා,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(33).wav,ටේක්ක ටන්ටු ලෙව්ට ඔයා,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(27).wav,ටේක් ටොන්ටු ලෙහ් ඔය දැ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(48).wav,ඉස්සහට යන්න ස්ට්ලයෙ�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(23).wav,ඉස්සරහට යන්නස් රේත්ල,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(75).wav,නවතින්ල වෙක් කරන්පස�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(49).wav,තෙක තොන්තු ලැව්ට ඔවා ද,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(43).wav,පිටිපස්සට යන්න ස්ටැ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(11).wav,නවතෙන්න ඔවග කරන් පොස්,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(3).wav,ඉස්සරහට යන්න ස්චේට්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(57).wav,පිටිපස්සට යන්න ස්රේ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(40).wav,ටේක ටේක් තොන්ටු ලෙව්ත,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(18).wav,පිටි පසට යාන්නේ ස්ටි�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(56).wav,පිටිපස්සට යන්න ඉස්ට්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(58).wav,නොතින් ඔයාගේ කරන් පොත,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(70).wav,තේක් ටලන්ටු රයිට ඔය දැ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(72).wav,ටැයකටානටෝ රයිට් දැන්,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(11).wav,ටෙකටන්ටුරයි ඔන දැන් ඉ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(54).wav,නව තින්න ඔය ආගේ කරන්පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(45).wav,තවතින්න ඔයාගෙ කරන් පො,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(59).wav,පිටි පස්සට යන්ඩ ඉනස්ට,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(62).wav,පිටිපස්තරයන්න ඉස්ට්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(55).wav,නවැතින්න ඔයාගෙක් හර�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(63).wav,නව තින්නේ වාගේ කරන් ප�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(76).wav,තෙක්ක ට්න්ටුල්ය්ත් ඔ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(19).wav,ටෙක තොන්තෝ රැයි ඔයා දැ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(13).wav,නවතින්නේ ඔයායු කරන්ප,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(66).wav,ටෙකට් වෙන්ටු රය්ට් ඔ�,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(16).wav,පිඩිපස්ටයන් නස්රැට්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(55).wav,පිටිපසටයන්න ස්ටැර්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(12).wav,ඉස්සරහට ඇන්නස්ට්රේට,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(46).wav,තෙක තොන්ටු රැය්ට් ඔලා,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(5).wav,පිටිපසට යන්න ඉස්රැටල,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(33).wav,ඉස්සරහට යන්නයා ඉස්සෙ,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(58).wav,දකුණට හැරෙන්න පොමිය�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(56).wav,ඉස්සරහට යන්ව ස්ටිට්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(39).wav,ස්සරහට යන්න ස්රැයිට�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(67).wav,ඉස්සරහඩයන්න ඉස්ස්රේ,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(31).wav,නවැතින්න පෙයාලි කරන්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(73).wav,හිස්සරාට යන්නස්ට්රේ,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(28).wav,පිටිපැස්සට යන්නේ ස්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(43).wav,ස්සරහට යන්න ස්ට්ලයි�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(8).wav,ත්ක්ත්ත්ත් රැය් ඔය දැ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(55).wav,ටේක් ට්ර්න් තු ලෙව්ට්,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(67).wav,නාව තින්න ඔයාගේ කරන් ප,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(19).wav,නිස්සුරහතයන්න ස්රේ �,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(48).wav,පෙටිපස්සට යන්න ස්ට්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(50).wav,ඉස්සරාඩන්නේ ස්රෙට්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(50).wav,පිටිපස්සට යන්නෙස් රෙ,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(9).wav,තේකටන්ටු රයිට් ඔවා දැ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(32).wav,ඉස්සරයට යන්ස්ට්ලැන්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(52).wav,ත්යාගේ කරන් පොසිෂන් එ,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(50).wav,තෙක ටන්ටු ලෙව්ට් දැඟි,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(36).wav,ටෙක ට්න්ටු ලෙව්ටුවා ද,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(26).wav,නවතින්න ඔයාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(17).wav,ඉස්රහටයන්න ඉස්රෙට්ල,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(21).wav,ත්ක තොන්තු ලෙව්ට් ආදැ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(60).wav,නවතින්න ඔයාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(44).wav,ස්සරාට යන්නස්ට් ළයි�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(41).wav,ටේක ටැවැන්ටුල්ව්ත් අ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(21).wav,ඉසසරහට යන්න ස්රේට ලැ�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(19).wav,පිතිපස්තයන් ස්රේතය�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(37).wav,පිටිපසරයන්න ස්රේටල�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(64).wav,ටේක්ට්ට්ටුල්ව් ඔය අ ද,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(4).wav,ටෙක ටැන්ටු රැයිට ආදැන,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(21).wav,නව තින්නාගේ කරන් පසින,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(42).wav,නවත්තින්නෝ ආගේ කරන් ප,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(69).wav,ටේක ටොන්ටු ලෙව්ට් ඔයා,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(13).wav,පිරිබසරයන් ස්වේටලය�,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(70).wav,ඉස්සර හට යන්න ස්ට්ලය,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(41).wav,එක ටැවැන්තු රැයිට් ව�,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(55).wav,ටෙක්කට්ටිර් රැයිට් ඔ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(52).wav,ඔයාගේ කරන් ප්සිෂන් එක,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(39).wav,ටේක ටොන්ටු රැයිත් ඔය ද,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(62).wav,නවතින්න ඔයාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(55).wav,ඉස්සරාට යන්න ඉස්ට්රේ,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(72).wav,ටේක්ට්ටු ලෙව්ට්වා දෙ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(37).wav,තේක් තොයන් තු ලෙව්ට් ඔ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(10).wav,නවතින්නවාගේ කරන්පස්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(23).wav,නවතින්න ඔයාගේ කරන්පස,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(7).wav,ඉස්ස රහට යන්නෙස්වියට,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(57).wav,ටේකට තුළෙශ්ට් වාදැන�,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(4).wav,ඉස්සරාට යන්න ස්රේට්�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(20).wav,නවතින්න ඔවාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(32).wav,නවතින්න ඔයාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(76).wav,තෙක්ක ටොන්ටුරයිට ඔය ද,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(23).wav,පිටි පස්සට යන්න ස්රේ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(68).wav,ටේක්ක තොර්ටු රැයිට් ඔ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(66).wav,පිටිවසරියන්න ස්ටිය�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(1).wav,නවතින්නවාගෙ කරන් පොස,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(61).wav,ටෙක්ක්ට්වන් ලෙව්ත් �,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(6).wav,ඉස්සරහට යන්නැස්ට්රේ,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(39).wav,නවතින්න්ද ඔය අගේ කරන්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(9).wav,නවතින් නොවාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(37).wav,ත්කත් තොර්න්ට් රායිට,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(61).wav,ටේක් ඤොන් රැයි ඔළදැන්,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(41).wav,ස්සරහඩන්නේ ස්සයට් ල�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(1).wav,ත්ක තොන්ටුල්වට් ඔහා ද,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(47).wav,ටෙක් ටරංක්ටු ලෙව්ට් ඔ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(51).wav,ඔයාගේ කරන්පසිෂන් එකය,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(29).wav,නවතින්න ඔයාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(69).wav,ටේක් ට්න්ටු ර්යි ඔයා ද,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(57).wav,ඉසරරාඩ අන්නුස් රේට්ල,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(7).wav,පිටිපස්සටයන්නේ ස්ව�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(43).wav,තෙක්ක ටවන්ටුලෙස් තා ද,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(36).wav,පිටුවසරයන්නස්රයෙන්,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(9).wav,ඉස්සර හටයන්න ස්ට්ලය,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(46).wav,තෙක තොර්න්ටු ලැව් අය ද,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(6).wav,ත්න්ටුල්ල්වත් ඔය දැන,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(53).wav,ටෙක ටොන්තු රයෙත් ඔය දැ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(38).wav,පිටිබසර යන්න ස්රේට් �,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(26).wav,පිටිවසරයන් ස්ටිලයි�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(74).wav,ට්රේඩ් ලයින්නෙගග ඉස්,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(61).wav,ඉස්සරහට යන්නෙ ඉස්ට්ර,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(66).wav,ඉස්සරායන්ම ස්රේට් ල�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(10).wav,පිටි පස්සට යන්න ස්ටි�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(51).wav,ටෙයෙක් ඇට්ටෙන්ටුරයි,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(44).wav,ත්තිර්තිර්ති වෑදැන�,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(27).wav,නවතේන්න ඔයාගෙ කරන් පො,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(38).wav,යෙක ටොන්ටුරයි ඔන් ඉන්,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(66).wav,ඔයා දැංයින්න පොෂිශන්,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(49).wav,ඉස්සරාට යන්නස් රෙයට්,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(34).wav,ට්ටික ටොන් තුර්ලේ්වත,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(30).wav,පිටි පස්සට යන්නා න්ස්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(54).wav,ස්රහට යන්නු ස්රේට්ල�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(54).wav,ඔය දෙන්නින් පොෂෂණෙක්,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(12).wav,ටේක් ටට්ටුරයි ටොයා දැ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(42).wav,පිටිපස්සට අන්න ස්රේ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(35).wav,ටෙකටරටු රැයි වාධන්න�,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(59).wav,ත්ග් තොයන්ටු ර්යිට් අ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(75).wav,එක ටොන්ටුරයිත් වා දැ�,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(59).wav,නාවතින්න ඔයාකි කාරන්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(48).wav,තෑක්වත් තොන්තු රැය්ට,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(32).wav,ටේක් ටොන් රැයිට් ඔලාධ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(45).wav,ටේක්ට්ටාන්ටු රය්ට් ක,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(65).wav,තෙක තොන්ට රැයිට ඔවා දැ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(67).wav,ඔයා දැඟින්න පොෂිස්ෂන,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(34).wav,ත්ටිකටට්ටු රැයිට් ඔය,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(43).wav,නවතින්න වෙයාගේ කරන් �,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(46).wav,ත්වසත්යන්න ඇස්ට්ලීන,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(11).wav,ඉස්සරහටයන්න ස්රැයි�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(1).wav,පිටිපස්සට යන්නස්ට්ර,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(13).wav,ඉස්සරාටයන්න ස්ටැයට�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(60).wav,තෙයෙක තොර්න්ට ර්වයි ඔ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(43).wav,ටේක් අත්න්ටුරයි ඔයා ද,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(36).wav,නාවතින් ඔවේ ආගේ කරන් ප,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(50).wav,නවතින්න ඔයාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(18).wav,නවතිනවේ කරන්පස් චැන්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(51).wav,පිට පසරයන්නේ ස්චේටල�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(19).wav,නවතින්න ඔයාගෙ කාරෙන්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(63).wav,තෙක්කට් තොයන්ටු රායි,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(7).wav,නවතින්න ආය කරන් පොසිෂ,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(26).wav,ටේක්ට්ටේන්ටුලෙහි අ ද,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(42).wav,ඉස්සරහටය අන්ස්රේට්ල,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(72).wav,ඉස්සොරහට යන්නස්ස්රේ,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(27).wav,කිටිමසට යන්න ස්නේට් �,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(18).wav,අඳ ඔය ඉස්සර හට අන්න ස්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(5).wav,ත්ටුන්ටු රැය්ට් ඔයා ද,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(16).wav,රැයිට ඔර් දැන් ඉන් පොෂ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(64).wav,ටේක්කට අරටු රයිට් ඔයි,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(45).wav,පෙටි පස්තට යන්න ස්රැ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(28).wav,ටෙක ටර්න්ටු රයිත් ඔයා,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(67).wav,ඔයා දැඟින්න පොෂිෂ්යන,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(1).wav,ඉස්ස රහට යන්න ස්ට්රේ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(76).wav,පිටිපසරයන් ස්ටියට ල�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(5).wav,ටේක්ක් ට්න්ටු ලෙව්ට්,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(23).wav,තේකත් ඤාන් චුදලැස් ටො,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(27).wav,ඉස්සරහට යන්න ස්රේට්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(70).wav,පිටිපස්සට යන්න ස්ට්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(21).wav,පිටුපස්රයන්න ස්රේට�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(22).wav,ත්ටික ත්තිත් ත්තු ලෙව,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(24).wav,නවතින්න ඔයාගේ කරන් පස,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(16).wav,ත්ටෙක ටෙයන්ටු ලේව් ඔය,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(60).wav,ගෙයික තොන්තු ලෙව්ට් ඔ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(13).wav,චෙක ත්ර්න්ට් ලැව්ට් ඔ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(7).wav,ටෙකට් ටෙන්ටු ලෙව්ට් ඔ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(68).wav,පිටිපස්සටයාන්නේ ස්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(35).wav,ඉස්සරහටයන්න ඉස්ස්රේ,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(45).wav,තේක ටාල් ටුල්ලේ්ට් ඔය,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(46).wav,ඉස්සරහට යන්න ස්ටවේට �,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(33).wav,ත්ක තොන්තු රායිට ඔය දැ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(74).wav,නවතින්න ඔවාගේ කරන් ප්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(28).wav,නවතින්න ඔයාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(39).wav,පිටිපස් සට යන්නා ස්ර,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(57).wav,නවසින්නැට් යට් කරන්ට,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(18).wav,ත්ත්ත්ත්ලම් තොනාදන්,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(58).wav,වාමට හැරෙන්නෙ වොමිය,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(74).wav,ත්ටික් ඇත්න්ටු ලෙව්ට,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(28).wav,ටයෙක ටන්ටු ලෙප්ට් ඔයා,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(71).wav,ඉස්සරහට යන්න ස්චේට් �,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(12).wav,ටයෙකටනටු ලෙව්ට් ඔයා ද,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(39).wav,ටේක් ට්න්ටු ලෙව්ට ඔයා,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(73).wav,පිටිවසට යන්නස් රේට්ල,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(53).wav,තෙක් කටයෙන්ටු ලෙප්ට ඔ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(3).wav,බිට්පස්ට යනස්රැයට්ල,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(56).wav,ටේක ටොන්න්ටු රායිට් ඔ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(47).wav,ඉස්සරහාට යැනස්ස්ට්ව,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(24).wav,ඉස්රහට යන්ව ස්ටේට් ල�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(24).wav,පිටිපසටයන්න ස්ටේර්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(14).wav,ඉස්සරහටයර්නව ඉස්ට්ල,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(65).wav,ටේගට් ටවන්ටු ලැව්ට් ප,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(70).wav,ස්ට්පොවායගේ කරන්ටින,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(3).wav,ද්යික තොන්ට ලෙප්ට ඔවා,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(52).wav,පිටිපස්ටය අන්න ස්රේ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(37).wav,ත්කත් තොර්න්ට් රායිට,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(62).wav,ඉස්සරහට යන්න ස්ටියෙ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(40).wav,පිටිබස්තර යන්න ස්ටි�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(42).wav,තෙක තොර්න්ට ලෑව්ට ආ දැ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(38).wav,නවතින්නෝ යාගේ කරන්පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(31).wav,ඉස්සරහට යන්නේ ස්ටේට�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(15).wav,පිද පස්සට යන්නස් රේටල,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(34).wav,පිටි පසටයන්නේ ස්ටිල�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(66).wav,ඔයා දැංගෙන්න පොසිෂණන,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(10).wav,ඉස්රාට යන්න ස්රේට්ල�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(54).wav,ටේක් ටොයන්ටු රයි ඔවා ද,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(40).wav,නවතින්නවාක කරන් පොෂස,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(53).wav,ඔයාගේ කරන්පොස්සනෙක ඉ,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(6).wav,යෙට්වර්තයනස්ට්රේයි,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(8).wav,ඉස්සරාටය යන්ස් රැයිට,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(2).wav,දෙක තොන්තු රයි බැන් ඉන,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(14).wav,තෙක් තොටුරායිත් හෝධ�,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(65).wav,පිටිබසර යන්නෙස් රෙයට,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(76).wav,ඉස්සරාටයෙන්න ස්රේට�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(5).wav,ඉස්සරහට යන්න ඉස්ස්රැ,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(4).wav,ටෙකට් ටොයන්ටු ලැව්ට්,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(9).wav,තෙක ට්න්ටු ලෙව්ට් දැං,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(1).wav,ත්ක ට්න් රැයිට් ඔය දැන,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(25).wav,ඉස්සරහට යන්නස්ට්ලෙන,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(62).wav,ඇටේක් ටොන් රැයිට් වා �,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(31).wav,ත්ට්ට්ටුලේ්ත් පාධ ඉන,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(2).wav,පිටිපස්තර යන්න ස්ටි�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(2).wav,නවතින්නේ ඔගේ කරන් පොස,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(69).wav,ඉස්සරහට යන්නේ ස්රැඩ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(33).wav,තින්නව යාගේ කරන් පොෂෂ,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(46).wav,නව තින්නෝගෙ කරන් පොසි,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(61).wav,නවතින්න ඔයාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(14).wav,නොතින්නුවාගේ කරන්ප්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(16).wav,ඉස්සරහට ඇන්න ස්රේට්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(15).wav,ත්තුල්ත් වා දැන්යි න�,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(17).wav,පිටි පසටයන් ස්ටිරාය�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(16).wav,නවතින්නවාගේ කරන්පස්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(20).wav,පිට පස්වට යන්නේ ස්චැ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(40).wav,ටේක් ටොටුරායි ටවාධන්,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(40).wav,ස්සරාඩයන්නස්රේරැයි,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(3).wav,ත්ක තොන්ටු රැයි ඔහා දැ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(26).wav,ඉස්සරහට යන්ස්ට්ලායි,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(72).wav,පිටිපස්ටියන්න ස්රේ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(71).wav,ට්ටේකට්න්ටු ලේ දැන්ය,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(38).wav,ට්න්ටු ලෙව්ටු වා දැන�,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(2).wav,ස්සරහටයන්නා ස්ට්ල්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(71).wav,නවතෙන්වා දෙන් කරම්පර,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(11).wav,පිටි පත්සටයාන්නස් ර්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(59).wav,ඉස්ස රහට යන්න ස්චියි�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(2).wav,ලෙපට ඔවා දැන් ඉන්න පොස,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(29).wav,ඉස්සරහට යන්ඩ ස්ර්ර්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(38).wav,ස්රාට යන්නස්රියිට් ල,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(74).wav,කොයා දැංින්න පැසිෂන්,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(54).wav,ත්යෙක තොන්ටු ලෙව්ට් ඔ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(37).wav,ඉස්ස රහට යන්න ස්රේට් �,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(53).wav,නවතින්න ඔාගේ කාරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(8).wav,මවත්වෙන්න ඔාගේ කරන් ප,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(49).wav,නවතින්න ඔවායි කරන්ත්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(71).wav,තේකටර් රැයිට එකට ඔයා ඉ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(44).wav,නවතින්න ඔයාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(30).wav,තෙක් තොයන්ට ලැව්ට ආ දැ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(41).wav,රිවාස්නන්නේ ස්රැට්�,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(35).wav,නවතින්න ඔයගෙ කරන් පොස,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(12).wav,පිටිපස්සටයන්නස්ට්ර,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(65).wav,ඉස්සරහට යංන්ව එස්ට්ර,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(30).wav,ත්ක් තොන්ට රායිට් ආ දැ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(50).wav,ටෙක ටොයන්ටු රැයි දැන්,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(69).wav,පිටිපස්සට යන්න න්ස්ර,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(22).wav,ටෙක ටට්ටු රැයි ඔා දැන්,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(11).wav,ටෙක ටන්ටු ලැව්ට් ඔවා ද,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(75).wav,විස්සරාහට යන්නස් රේට,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(36).wav,ටෙකටට්න්ටු රයිත් වා �,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(73).wav,ටේක්ටට්ටුරයිට ඔහා දැ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(52).wav,ඔයාගේ කරන්ප්ජිෂන් එක,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(24).wav,ත්තිර්තු ලැව්ති ඔයා ද,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(32).wav,ත්ටික ට්ල්ල්වත් දැන්,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(17).wav,නවති නවාගේ කරන් පොස්ච,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(62).wav,ටේක ටන් ලෙව්ට් ඔයාගේ ද,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(29).wav,ටේක් තොන්ටු ලෙව්ට් ඔය,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(28).wav,ඉස්සරාටයන්නස්ට්ලයි,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(58).wav,පිඩිබසරියාන් ශේට්ල�,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(49).wav,පිරිපස්සට යාන්නස්ට්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(31).wav,පිටිපස්සර යන්න ස්ටැ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(44).wav,ත්ත්තුලිස්ටුයිස්ටු,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(27).wav,ත්ක තොන්ට රයිට් ඔය දැන,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(6).wav,ටේක් ටර්න්ටු රැය්ට් ඔ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(14).wav,තෙක තර්න්තු ලැව්ත් ඔය,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(60).wav,ඉස්ස රහටා යන්නස්ට්රේ,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(60).wav,තිටිවසර එයන්න ස්ටිර�,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(7).wav,ට්කට් තොර්ඩ් ඔයා දැන්,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(64).wav,ඉස්සරහට යන්න ස්ට්ලය�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(32).wav,පිටිපසට යන්න ස්ටිර්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(26).wav,ත්ටේක් ට්න්ටුර්යට් අ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(29).wav,ටේක් ටොන්ටු රැය්ට් ඔය,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(63).wav,ඉස්සරහටයන්න ස්ස්රෙ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(45).wav,රැටැන්ම ස්ට්රෙත්ලය�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(13).wav,ට්ර්යිත් ඔය දෙන් ඉන් ප,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(6).wav,නවතින්න ඔයයේ කරන් පස්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(68).wav,ඔයාත් දැංයින්න පොෂිෂ,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(19).wav,ටේක තොන්තු ලැප්ත් ඔය ද,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(31).wav,ටේක්ක් ටාන්ටුර්රයි ඔ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(64).wav,නවතින්න ඔයාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(20).wav,ස්සරහට යන්වන් ස්ට්ය�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(65).wav,නවතින් ඔවාගේ කරන්පෂෂ,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(8).wav,පිතිපසටයන්න ස්ටැයි�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(17).wav,ට්ල්ල්ල්ල්ල්ල් ලාදන,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(49).wav,ටයික ටර්නටුර්යයිත් ඔ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(29).wav,පිටිපස්තට යන්ඩ ස්රේ�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(71).wav,පිටිපස්ර ඇනස්ර්යිලය,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(53).wav,ඔයාගේ කරන්පොසිෂන් එක,Unrecognized_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(73).wav,ඔයා දැංින්න පසිචන්නක,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(68).wav,ටේක්ක් ට්ර්ඬු ලෙව්ට්,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(36).wav,ඉස්සරහට ඇන්නා ස්වේට�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(22).wav,නවතින්න ඔයාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(17).wav,ත්ක තාන්ටුරායට අදනයි,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(70).wav,තෙයක තොරන්තු ලැෆ්ත ඔය,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(15).wav,ඉස්සරහට යන්නස්රේටලය,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(10).wav,තෙක ටොන්ටු රැයිට් ඔවද,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(30).wav,ඉස්සරහට යන්නා ඉස්රේර,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(35).wav,ටෙයෙක ටොන්ටු ලෙව්ට් ඔ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(48).wav,න්නුවාගේ කරන් පොස්ෂන,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(14).wav,පිටිවස්සටයන්නේ ස්ට�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(48).wav,තාන්තුර්වර්ස් ඔයාධැ,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(9).wav,පිටිපස්තට එයන්නස්ට්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(69).wav,නවතින්න ඔයාගේ කරන් පො,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(72).wav,නවතින්නව ඇකේ කරන්ත්ව,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(61).wav,ත්ත්ත්,Mapped_stop_for_backward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(57).wav,කෙක ටර්න්තු රැයිත් ඔධ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(22).wav,ඉසරහට යන්න ස්රේට්ලැ�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(20).wav,ටේක් ට්න්ටු ලෙව්ට් ඔය,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(64).wav,පිටිපස්සටයන්න ස්සි�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(73).wav,තෙක තොන්ටු ලැව්ට් ඔවා,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(18).wav,තෙක තොන්ටුරා ඉටාධන්න,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(67).wav,තෙක්කත් තන්තුල යෙව්ට,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(15).wav,නව තින්නවගේ කරන් පොස්,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(44).wav,පිටිබුවස්වට යන්ට ස්�,Success_GT_Match
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(75).wav,ටේක් ටොන්තු ලේ ඔයා දැන,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/forward/forward(34).wav,ඉස්සරාට අනේ ස්ට්ලයෙ�,Unrecognized_for_forward
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(76).wav,ලෝතින්න වායාල් කරම් �,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/right/right(20).wav,ටේක් ටනටු රයිට් ඔවාදැ,Unrecognized_for_right
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/stop/stop(4).wav,මවතින්න ඔගේ කරන් පොස්,Unrecognized_for_stop
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/left/left(51).wav,ටෙක්ට්ට්ලාව්ට් අය දැ,Unrecognized_for_left
+/content/drive/MyDrive/2nd Year Research Data/Preprocessed_Audio/backward/backward(25).wav,පිටිපස්ට යනස් යෙටලයි,Success_GT_Match
