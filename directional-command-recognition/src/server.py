@@ -16,17 +16,46 @@ app = FastAPI(title="Directional Command Recognition Server")
 
 print("Initializing models... This may take a moment.")
 # Initialize pipelines (models are loaded into memory here, only once)
-# Paths are relative to the root directory where the server is run from
 pipeline_a = ASRPipeline(model_path="models/asr_classifier.pt")
 pipeline_b = AcousticPipeline(model_path="models/acoustic_classifier.pt")
 print("Models loaded successfully.")
 
 async def process_audio(audio_bytes):
     """Convert raw bytes to 16kHz numpy array."""
-    # Assuming incoming bytes are 16-bit PCM (common for WebSockets)
-    # If using webm/wav blobs, librosa.load with io.BytesIO is safer
+    # Using librosa to decode any browser audio format (wav/webm)
     audio, _ = librosa.load(io.BytesIO(audio_bytes), sr=16000)
     return audio
+
+async def run_and_send_a(websocket, audio_data, start_time):
+    """Run ASR pipeline and send result immediately."""
+    try:
+        result = await pipeline_a.predict(audio_data)
+        latency = int((time.time() - start_time) * 1000)
+        response = {
+            "pipeline": "A",
+            "command": result["prediction"],
+            "confidence": result["confidence"],
+            "transcription": result["transcription"],
+            "latency_ms": latency
+        }
+        await websocket.send_json(response)
+    except Exception as e:
+        print(f"Error in Pipeline A: {e}")
+
+async def run_and_send_b(websocket, audio_data, start_time):
+    """Run Acoustic pipeline and send result immediately."""
+    try:
+        result = await pipeline_b.predict(audio_data)
+        latency = int((time.time() - start_time) * 1000)
+        response = {
+            "pipeline": "B",
+            "command": result["prediction"],
+            "confidence": result["confidence"],
+            "latency_ms": latency
+        }
+        await websocket.send_json(response)
+    except Exception as e:
+        print(f"Error in Pipeline B: {e}")
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
@@ -40,40 +69,17 @@ async def websocket_endpoint(websocket: WebSocket):
             # 2. Process audio
             audio_data = await process_audio(audio_bytes)
             
-            # 3. Run both pipelines concurrently
-            start_a = time.time()
-            task_a = pipeline_a.predict(audio_data)
-            
-            start_b = time.time()
-            task_b = pipeline_b.predict(audio_data)
-            
-            result_a, result_b = await asyncio.gather(task_a, task_b)
-            
-            latency_a = int((time.time() - start_a) * 1000)
-            latency_b = int((time.time() - start_b) * 1000)
-            
-            # 4. Prepare combined response
-            response = {
-                "pipelineA": {
-                    "command": result_a["prediction"],
-                    "confidence": result_a["confidence"],
-                    "transcription": result_a["transcription"],
-                    "latency_ms": latency_a
-                },
-                "pipelineB": {
-                    "command": result_b["prediction"],
-                    "confidence": result_b["confidence"],
-                    "latency_ms": latency_b
-                }
-            }
-            
-            # 5. Send back to frontend
-            await websocket.send_json(response)
+            # 3. Launch both pipelines as independent concurrent tasks
+            # This allows Pipeline B to finish and send its message 
+            # while Pipeline A is still transcribing.
+            start_time = time.time()
+            asyncio.create_task(run_and_send_a(websocket, audio_data, start_time))
+            asyncio.create_task(run_and_send_b(websocket, audio_data, start_time))
 
     except WebSocketDisconnect:
         print("Client disconnected.")
     except Exception as e:
-        print(f"Error processing audio: {e}")
+        print(f"Global error: {e}")
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

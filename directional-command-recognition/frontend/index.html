@@ -56,7 +56,7 @@
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-            transition: border 0.3s;
+            transition: border 0.3s, transform 0.2s;
         }
         .panel h3 { margin-top: 0; border-bottom: 1px solid #444; padding-bottom: 10px; font-size: 1.2rem; }
         .metric { font-size: 1.1rem; margin: 12px 0; display: flex; justify-content: space-between;}
@@ -127,36 +127,38 @@
             padding: 10px 0;
             font-family: 'Courier New', Courier, monospace;
             font-size: 0.95rem;
-            display: flex;
-            justify-content: space-between;
         }
-        .mismatch { border: 2px solid var(--warning) !important; }
+        .mismatch { border: 3px solid var(--warning) !important; transform: scale(1.02); }
     </style>
 </head>
 <body>
 
     <div class="header">
         <h1>Hypothesis Validation: Acoustic vs. ASR Pipelines</h1>
-        <p>Testing Real-Time Latency & Accuracy for Directional Commands</p>
+        <p>Real-Time "Race" Comparison for Research Defense</p>
     </div>
 
     <button id="recordBtn" class="record-btn">HOLD TO COMMAND</button>
 
     <div class="dashboard">
+        <!-- Panel A (Whisper) -->
         <div class="panel" id="panel-a" style="border-top: 6px solid var(--accent-whisper);">
-            <h3>Pipeline A: Whisper + Semantic</h3>
+            <h3>Pipeline A: Whisper ASR</h3>
             <div class="metric">Status: <span id="status-a" class="status-text">Ready</span></div>
             <div class="metric">Command: <span id="cmd-a" class="highlight">--</span></div>
             <div class="metric">Confidence: <span id="conf-a">--</span>%</div>
             <div class="metric">Latency: <span id="lat-a" style="color: var(--accent-whisper)">--</span> ms</div>
+            <div id="transcription-a" style="font-style: italic; font-size: 0.8rem; color: #888; margin-top: 5px; min-height: 1rem;"></div>
         </div>
         
+        <!-- Panel B (DistilHuBERT) -->
         <div class="panel" id="panel-b" style="border-top: 6px solid var(--accent-hubert);">
-            <h3>Pipeline B: DistilHuBERT (Acoustic)</h3>
+            <h3>Pipeline B: DistilHuBERT</h3>
             <div class="metric">Status: <span id="status-b" class="status-text">Ready</span></div>
             <div class="metric">Command: <span id="cmd-b" class="highlight">--</span></div>
             <div class="metric">Confidence: <span id="conf-b">--</span>%</div>
             <div class="metric">Latency: <span id="lat-b" style="color: var(--accent-hubert)">--</span> ms</div>
+            <div style="font-size: 0.8rem; margin-top: 5px; min-height: 1rem;">(Direct Acoustic Extraction)</div>
         </div>
     </div>
 
@@ -172,7 +174,7 @@
     </div>
 
     <div class="log-container">
-        <h3 style="margin-top:0">System Event History</h3>
+        <h3 style="margin-top:0">Event Log</h3>
         <div id="historyLog"></div>
     </div>
 
@@ -180,8 +182,12 @@
         const ws = new WebSocket("ws://localhost:8000/ws");
         let mediaRecorder;
         let audioChunks = [];
-        let lastCommandA = "";
-        let lastCommandB = "";
+        
+        // Track states for mismatch detection
+        let currentCommandA = "";
+        let currentCommandB = "";
+        let pendingA = false;
+        let pendingB = false;
 
         const btn = document.getElementById('recordBtn');
         const log = document.getElementById('historyLog');
@@ -198,60 +204,69 @@
             }
         }
 
+        function checkMismatch() {
+            // Only compare if both have finished the current round
+            if (!pendingA && !pendingB && currentCommandA && currentCommandB) {
+                if (currentCommandA !== currentCommandB) {
+                    document.getElementById('panel-a').classList.add('mismatch');
+                    document.getElementById('panel-b').classList.add('mismatch');
+                } else {
+                    document.getElementById('panel-a').classList.remove('mismatch');
+                    document.getElementById('panel-b').classList.remove('mismatch');
+                }
+            }
+        }
+
         ws.onmessage = (event) => {
             const data = JSON.parse(event.data);
             
-            // Process Pipeline A (ASR)
-            document.getElementById('status-a').innerText = "Complete";
-            document.getElementById('status-a').classList.remove('processing-text');
-            document.getElementById('cmd-a').innerText = data.pipelineA.command.toUpperCase();
-            document.getElementById('conf-a').innerText = (data.pipelineA.confidence * 100).toFixed(1);
-            document.getElementById('lat-a').innerText = data.pipelineA.latency_ms;
-            moveRobot('robot-a', data.pipelineA.command);
-            lastCommandA = data.pipelineA.command;
-
-            // Process Pipeline B (Acoustic)
-            document.getElementById('status-b').innerText = "Complete";
-            document.getElementById('status-b').classList.remove('processing-text');
-            document.getElementById('cmd-b').innerText = data.pipelineB.command.toUpperCase();
-            document.getElementById('conf-b').innerText = (data.pipelineB.confidence * 100).toFixed(1);
-            document.getElementById('lat-b').innerText = data.pipelineB.latency_ms;
-            moveRobot('robot-b', data.pipelineB.command);
-            lastCommandB = data.pipelineB.command;
-
-            // Disagreement Highlight
-            if(lastCommandA !== lastCommandB) {
-                document.getElementById('panel-a').classList.add('mismatch');
-                document.getElementById('panel-b').classList.add('mismatch');
+            if (data.pipeline === "A") {
+                // Pipeline A (Whisper) finished
+                document.getElementById('status-a').innerText = "Complete";
+                document.getElementById('status-a').classList.remove('processing-text');
+                document.getElementById('cmd-a').innerText = data.command.toUpperCase();
+                document.getElementById('conf-a').innerText = (data.confidence * 100).toFixed(1);
+                document.getElementById('lat-a').innerText = data.latency_ms;
+                if(data.transcription) document.getElementById('transcription-a').innerText = `"${data.transcription}"`;
+                moveRobot('robot-a', data.command);
+                currentCommandA = data.command;
+                pendingA = false;
             } else {
-                document.getElementById('panel-a').classList.remove('mismatch');
-                document.getElementById('panel-b').classList.remove('mismatch');
+                // Pipeline B (Acoustic) finished
+                document.getElementById('status-b').innerText = "Complete";
+                document.getElementById('status-b').classList.remove('processing-text');
+                document.getElementById('cmd-b').innerText = data.command.toUpperCase();
+                document.getElementById('conf-b').innerText = (data.confidence * 100).toFixed(1);
+                document.getElementById('lat-b').innerText = data.latency_ms;
+                moveRobot('robot-b', data.command);
+                currentCommandB = data.command;
+                pendingB = false;
             }
+
+            checkMismatch();
 
             // Log entry
             const entry = document.createElement('div');
             entry.className = 'log-entry';
-            entry.innerHTML = `<span>[${new Date().toLocaleTimeString()}]</span> 
-                               <span>A: ${data.pipelineA.command} (${data.pipelineA.latency_ms}ms)</span>
-                               <span>B: ${data.pipelineB.command} (${data.pipelineB.latency_ms}ms)</span>`;
+            entry.innerHTML = `[${new Date().toLocaleTimeString()}] <b>Pipeline ${data.pipeline}</b>: ${data.command} in ${data.latency_ms}ms (Conf: ${(data.confidence*100).toFixed(1)}%)`;
             log.prepend(entry);
         };
 
         // Mic Capture
         navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
             mediaRecorder = new MediaRecorder(stream);
-            
-            mediaRecorder.ondataavailable = e => {
-                if (e.data.size > 0) audioChunks.push(e.data);
-            };
+            mediaRecorder.ondataavailable = e => { if (e.data.size > 0) audioChunks.push(e.data); };
             
             mediaRecorder.onstop = () => {
                 const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
-                if (ws.readyState === WebSocket.OPEN) {
-                    ws.send(audioBlob);
-                }
+                if (ws.readyState === WebSocket.OPEN) ws.send(audioBlob);
                 
-                // Trigger Visual "Processing" state immediately
+                // Visual Reset & Start Processing
+                pendingA = true;
+                pendingB = true;
+                document.getElementById('panel-a').classList.remove('mismatch');
+                document.getElementById('panel-b').classList.remove('mismatch');
+                
                 document.getElementById('status-a').innerText = "Processing...";
                 document.getElementById('status-a').classList.add('processing-text');
                 document.getElementById('status-b').innerText = "Processing...";
@@ -259,10 +274,7 @@
                 
                 audioChunks = [];
             };
-        }).catch(err => {
-            console.error("Mic access denied.", err);
-            alert("Microphone access is required for the live defense demo.");
-        });
+        }).catch(err => alert("Microphone required for demo."));
 
         btn.addEventListener('mousedown', () => {
             if (mediaRecorder && mediaRecorder.state === "inactive") {
@@ -277,12 +289,9 @@
                 btn.classList.remove('recording');
                 btn.innerText = "WAITING...";
                 mediaRecorder.stop();
-                setTimeout(() => {
-                    if (!btn.classList.contains('recording')) btn.innerText = "HOLD TO COMMAND";
-                }, 1500);
+                setTimeout(() => { if (!btn.classList.contains('recording')) btn.innerText = "HOLD TO COMMAND"; }, 1500);
             }
         });
-
     </script>
 </body>
 </html>
