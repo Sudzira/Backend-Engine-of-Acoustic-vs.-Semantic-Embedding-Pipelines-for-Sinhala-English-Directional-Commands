@@ -14,22 +14,35 @@ from pipelines.acoustic_pipeline import AcousticPipeline
 
 app = FastAPI(title="Directional Command Recognition Server")
 
-print("Initializing models... This may take a moment.")
-# Initialize pipelines (models are loaded into memory here, only once)
-pipeline_a = ASRPipeline(model_path="models/asr_classifier.pt")
-pipeline_b = AcousticPipeline(model_path="models/acoustic_classifier.pt")
+device = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"Initializing models on {device}... This may take a moment.")
+
+# Initialize pipelines
+pipeline_a = ASRPipeline(
+    model_path="models/asr_classifier.pt",
+    whisper_path="../asr_pipeline/models/whisper-sinhala",
+    minilm_path="../asr_pipeline/models/multilingual-minilm",
+    device=device
+)
+pipeline_b = AcousticPipeline(
+    model_path="models/acoustic_classifier.pt",
+    device=device
+)
 print("Models loaded successfully.")
 
 async def process_audio(audio_bytes):
     """Convert raw bytes to 16kHz numpy array."""
-    # Using librosa to decode any browser audio format (wav/webm)
-    audio, _ = librosa.load(io.BytesIO(audio_bytes), sr=16000)
-    return audio
+    # Run librosa.load in a thread as it is blocking
+    def _load():
+        audio, _ = librosa.load(io.BytesIO(audio_bytes), sr=16000)
+        return audio
+    return await asyncio.to_thread(_load)
 
 async def run_and_send_a(websocket, audio_data, start_time):
     """Run ASR pipeline and send result immediately."""
     try:
-        result = await pipeline_a.predict(audio_data)
+        # Run synchronous predict in a separate thread
+        result = await asyncio.to_thread(pipeline_a.predict, audio_data)
         latency = int((time.time() - start_time) * 1000)
         response = {
             "pipeline": "A",
@@ -45,7 +58,8 @@ async def run_and_send_a(websocket, audio_data, start_time):
 async def run_and_send_b(websocket, audio_data, start_time):
     """Run Acoustic pipeline and send result immediately."""
     try:
-        result = await pipeline_b.predict(audio_data)
+        # Run synchronous predict in a separate thread
+        result = await asyncio.to_thread(pipeline_b.predict, audio_data)
         latency = int((time.time() - start_time) * 1000)
         response = {
             "pipeline": "B",
@@ -56,6 +70,11 @@ async def run_and_send_b(websocket, audio_data, start_time):
         await websocket.send_json(response)
     except Exception as e:
         print(f"Error in Pipeline B: {e}")
+
+@app.get("/")
+async def get():
+    with open("frontend/index.html", "r", encoding="utf-8") as f:
+        return HTMLResponse(content=f.read())
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):

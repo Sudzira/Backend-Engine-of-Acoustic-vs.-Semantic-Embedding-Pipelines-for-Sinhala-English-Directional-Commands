@@ -3,179 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Pipeline Defense Dashboard</title>
+    <title>AI Pipeline Defense Dashboard - Interactive Prototype</title>
     <style>
         :root {
-            --bg-color: #1e1e2e;
-            --panel-bg: #282a36;
-            --text-color: #f8f8f2;
-            --accent-hubert: #50fa7b; /* Green for Speed */
-            --accent-whisper: #bd93f9; /* Purple for ASR */
-            --warning: #ff5555;
-            --processing: #ffb86c;
+            --bg-dark: #0f172a;
+            --panel-bg: #1e293b;
+            --asr-color: #a78bfa;
+            --acoustic-color: #34d399;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
         }
+
+        * { box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             margin: 0;
-            padding: 20px;
+            padding: 0;
             display: flex;
             flex-direction: column;
-            align-items: center;
-        }
-        .header { text-align: center; margin-bottom: 20px; }
-        .record-btn {
-            background-color: #ff5555;
-            color: white;
-            border: none;
-            padding: 15px 50px;
-            font-size: 1.4rem;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: 0.3s;
-            margin-bottom: 25px;
-            user-select: none;
-            box-shadow: 0 4px 15px rgba(255, 85, 85, 0.4);
-        }
-        .record-btn:hover { transform: scale(1.05); }
-        .record-btn.recording { background-color: var(--processing); animation: pulse 1.5s infinite; }
-        
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
-        
-        .dashboard {
-            display: flex;
-            gap: 20px;
-            width: 100%;
-            max-width: 1000px;
-            margin-bottom: 30px;
-        }
-        .panel {
-            flex: 1;
-            background: var(--panel-bg);
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-            transition: border 0.3s, transform 0.2s;
-        }
-        .panel h3 { margin-top: 0; border-bottom: 1px solid #444; padding-bottom: 10px; font-size: 1.2rem; }
-        .metric { font-size: 1.1rem; margin: 12px 0; display: flex; justify-content: space-between;}
-        .highlight { font-weight: bold; font-size: 1.4rem; }
-        
-        #cmd-a { color: var(--accent-whisper); }
-        #cmd-b { color: var(--accent-hubert); }
-        .status-text { font-weight: bold; }
-        .processing-text { color: var(--processing); animation: blink 1s infinite; }
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
-
-        .arena-container {
-            display: flex;
-            width: 100%;
-            max-width: 1000px;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        .track {
-            flex: 1;
-            height: 350px;
-            background: #21222c;
-            border-radius: 12px;
-            position: relative;
+            height: 100vh;
             overflow: hidden;
-            border: 2px solid #44475a;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
-        .track-label {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            color: rgba(255,255,255,0.3);
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            z-index: 1;
-        }
-        .robot {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            position: absolute;
-            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 38px;
-            z-index: 2;
-        }
-        .robot-a { background-color: var(--accent-whisper); box-shadow: 0 0 20px var(--accent-whisper); }
-        .robot-b { background-color: var(--accent-hubert); box-shadow: 0 0 20px var(--accent-hubert); }
 
-        .log-container {
-            width: 100%;
-            max-width: 1000px;
-            background: var(--panel-bg);
-            border-radius: 12px;
+        header {
             padding: 20px;
-            max-height: 200px;
-            overflow-y: auto;
-            box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
+            text-align: center;
+            background: rgba(15, 23, 42, 0.8);
+            border-bottom: 1px solid #334155;
+            z-index: 10;
         }
-        .log-entry {
-            border-bottom: 1px solid #444;
-            padding: 10px 0;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 0.95rem;
+
+        h1 { margin: 0; font-size: 1.5rem; letter-spacing: -0.025em; }
+        p { margin: 5px 0 0; color: var(--text-muted); font-size: 0.9rem; }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(30, 41, 59, 0.5);
+            z-index: 10;
         }
-        .mismatch { border: 3px solid var(--warning) !important; transform: scale(1.02); }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .record-btn {
+            background-color: #ef4444;
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(239, 68, 68, 0.39);
+        }
+        .record-btn:active { transform: scale(0.95); }
+        .record-btn.recording { 
+            animation: pulse 1s infinite;
+            background-color: #dc2626;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+
+        .main-display {
+            display: flex;
+            flex: 1;
+            position: relative;
+        }
+
+        .pipeline-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            border-right: 1px solid #334155;
+            overflow: hidden;
+        }
+
+        .pipeline-side:last-child { border-right: none; }
+
+        .pipeline-info {
+            padding: 20px;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(8px);
+            z-index: 5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pipeline-name { font-weight: 700; font-size: 1.1rem; }
+        .timer { font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; color: var(--text-main); }
+
+        .view-port {
+            flex: 1;
+            position: relative;
+            background-color: #020617;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Moving Background Logic */
+        .background-grid {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image: 
+                linear-gradient(rgba(51, 65, 85, 0.2) 2px, transparent 2px),
+                linear-gradient(90deg, rgba(51, 65, 85, 0.2) 2px, transparent 2px);
+            background-size: 60px 60px;
+            z-index: 1;
+            transition: transform 0.1s linear;
+        }
+
+        .stationary-object {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, var(--text-main) 0%, transparent 70%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            z-index: 2;
+            filter: drop-shadow(0 0 15px rgba(255,255,255,0.3));
+        }
+
+        /* Animations for Background */
+        @keyframes bg-forward { from { background-position: 0 0; } to { background-position: 0 500px; } }
+        @keyframes bg-backward { from { background-position: 0 0; } to { background-position: 0 -500px; } }
+        @keyframes bg-left { from { background-position: 0 0; } to { background-position: 500px 0; } }
+        @keyframes bg-right { from { background-position: 0 0; } to { background-position: -500px 0; } }
+
+        .moving-forward .background-grid { animation: bg-forward 5s linear infinite; }
+        .moving-backward .background-grid { animation: bg-backward 5s linear infinite; }
+        .moving-left .background-grid { animation: bg-left 5s linear infinite; }
+        .moving-right .background-grid { animation: bg-right 5s linear infinite; }
+
+        .advantage-footer {
+            padding: 20px;
+            background: rgba(30, 41, 59, 0.8);
+            z-index: 5;
+            min-height: 120px;
+        }
+
+        .advantage-title { font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 800; margin-bottom: 8px; }
+        .advantage-text { font-size: 0.95rem; line-height: 1.4; color: var(--text-main); }
+        .pipeline-metric { margin-top: 10px; font-size: 0.85rem; }
+        .command-display { font-size: 1.2rem; font-weight: 800; color: white; margin-top: 5px; }
+
+        #side-asr .pipeline-name { color: var(--asr-color); }
+        #side-acoustic .pipeline-name { color: var(--acoustic-color); }
+
+        .overlay-status {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 6;
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+        }
+
+        .show-status .overlay-status { opacity: 0.8; }
+        
+        .mismatch-indicator {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ef4444;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 10;
+            display: none;
+        }
+
+        /* Transcription bubble */
+        .transcription-bubble {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(167, 139, 250, 0.9);
+            color: #0f172a;
+            padding: 8px 16px;
+            border-radius: 12px;
+            font-weight: 600;
+            max-width: 80%;
+            text-align: center;
+            z-index: 4;
+            display: none;
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Hypothesis Validation: Acoustic vs. ASR Pipelines</h1>
-        <p>Real-Time "Race" Comparison for Research Defense</p>
-    </div>
+    <header>
+        <h1>Unbounded Parallel Pipeline Race</h1>
+        <p>Research Hypothesis: Acoustic-only features outperform ASR-Semantic pipelines in low-latency robotics.</p>
+    </header>
 
-    <button id="recordBtn" class="record-btn">HOLD TO COMMAND</button>
-
-    <div class="dashboard">
-        <!-- Panel A (Whisper) -->
-        <div class="panel" id="panel-a" style="border-top: 6px solid var(--accent-whisper);">
-            <h3>Pipeline A: Whisper ASR</h3>
-            <div class="metric">Status: <span id="status-a" class="status-text">Ready</span></div>
-            <div class="metric">Command: <span id="cmd-a" class="highlight">--</span></div>
-            <div class="metric">Confidence: <span id="conf-a">--</span>%</div>
-            <div class="metric">Latency: <span id="lat-a" style="color: var(--accent-whisper)">--</span> ms</div>
-            <div id="transcription-a" style="font-style: italic; font-size: 0.8rem; color: #888; margin-top: 5px; min-height: 1rem;"></div>
-        </div>
-        
-        <!-- Panel B (DistilHuBERT) -->
-        <div class="panel" id="panel-b" style="border-top: 6px solid var(--accent-hubert);">
-            <h3>Pipeline B: DistilHuBERT</h3>
-            <div class="metric">Status: <span id="status-b" class="status-text">Ready</span></div>
-            <div class="metric">Command: <span id="cmd-b" class="highlight">--</span></div>
-            <div class="metric">Confidence: <span id="conf-b">--</span>%</div>
-            <div class="metric">Latency: <span id="lat-b" style="color: var(--accent-hubert)">--</span> ms</div>
-            <div style="font-size: 0.8rem; margin-top: 5px; min-height: 1rem;">(Direct Acoustic Extraction)</div>
+    <div class="controls">
+        <button id="recordBtn" class="record-btn">HOLD TO COMMAND</button>
+        <div style="display: flex; gap: 5px; align-items: center; margin-left: 20px;">
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Simulate:</span>
+            <button onclick="simulateCommand('forward')">Forward</button>
+            <button onclick="simulateCommand('left')">Left</button>
+            <button onclick="simulateCommand('stop')">Stop</button>
         </div>
     </div>
 
-    <div class="arena-container">
-        <div class="track">
-            <div class="track-label">Whisper Track</div>
-            <div id="robot-a" class="robot robot-a">🤖</div>
+    <div class="main-display">
+        <!-- ASR Side -->
+        <div id="side-asr" class="pipeline-side">
+            <div class="pipeline-info">
+                <span class="pipeline-name">ASR PIPELINE (Whisper + LaBSE)</span>
+                <span id="timer-asr" class="timer">0.00s</span>
+            </div>
+            <div class="view-port">
+                <div class="background-grid"></div>
+                <div class="stationary-object">🤖</div>
+                <div class="overlay-status">READY</div>
+                <div id="transcription" class="transcription-bubble">...</div>
+            </div>
+            <div class="advantage-footer">
+                <div class="advantage-title">ASR Advantage Statement</div>
+                <div class="advantage-text">
+                    <strong>Semantic Interpretability & Debugging:</strong> Provides full text transcription, allowing developers to trace errors and handle complex linguistic variations.
+                </div>
+                <div class="pipeline-metric">
+                    Last Command: <span id="cmd-asr" class="command-display">--</span>
+                    <br>
+                    Confidence: <span id="conf-asr">--</span>%
+                </div>
+            </div>
         </div>
-        <div class="track">
-            <div class="track-label">DistilHuBERT Track</div>
-            <div id="robot-b" class="robot robot-b">🤖</div>
-        </div>
-    </div>
 
-    <div class="log-container">
-        <h3 style="margin-top:0">Event Log</h3>
-        <div id="historyLog"></div>
+        <!-- Acoustic Side -->
+        <div id="side-acoustic" class="pipeline-side">
+            <div class="pipeline-info">
+                <span class="pipeline-name">ACOUSTIC PIPELINE (DistilHuBERT)</span>
+                <span id="timer-acoustic" class="timer">0.00s</span>
+            </div>
+            <div class="view-port">
+                <div class="background-grid"></div>
+                <div class="stationary-object">🏎️</div>
+                <div class="overlay-status">READY</div>
+            </div>
+            <div class="advantage-footer">
+                <div class="advantage-title">Acoustic Advantage Statement</div>
+                <div class="advantage-text">
+                    <strong>Ultra-low Latency & Efficiency:</strong> Directly maps sound patterns to commands, bypassing transcription entirely. Perfect for real-time edge hardware.
+                </div>
+                <div class="pipeline-metric">
+                    Last Command: <span id="cmd-acoustic" class="command-display">--</span>
+                    <br>
+                    Confidence: <span id="conf-acoustic">--</span>%
+                </div>
+            </div>
+        </div>
+
+        <div id="mismatch" class="mismatch-indicator">PIPELINE MISMATCH DETECTED</div>
     </div>
 
     <script>
@@ -183,73 +290,82 @@
         let mediaRecorder;
         let audioChunks = [];
         
-        // Track states for mismatch detection
-        let currentCommandA = "";
-        let currentCommandB = "";
-        let pendingA = false;
-        let pendingB = false;
+        const timers = {
+            asr: { element: document.getElementById('timer-asr'), start: 0, running: false, interval: null },
+            acoustic: { element: document.getElementById('timer-acoustic'), start: 0, running: false, interval: null }
+        };
 
         const btn = document.getElementById('recordBtn');
-        const log = document.getElementById('historyLog');
 
-        function moveRobot(robotId, command) {
-            const robot = document.getElementById(robotId);
-            const step = 90;
-            switch(command.toLowerCase()) {
-                case 'forward':  robot.style.transform = `translateY(-${step}px)`; break;
-                case 'backward': robot.style.transform = `translateY(${step}px)`; break;
-                case 'left':     robot.style.transform = `translateX(-${step}px)`; break;
-                case 'right':    robot.style.transform = `translateX(${step}px)`; break;
-                case 'stop':     robot.style.transform = 'translate(0, 0)'; break;
+        function startTimer(type) {
+            stopTimer(type);
+            timers[type].start = performance.now();
+            timers[type].running = true;
+            timers[type].interval = setInterval(() => {
+                const elapsed = (performance.now() - timers[type].start) / 1000;
+                timers[type].element.innerText = elapsed.toFixed(2) + 's';
+            }, 10);
+        }
+
+        function stopTimer(type, finalLatencyMs) {
+            if (timers[type].interval) {
+                clearInterval(timers[type].interval);
+                timers[type].interval = null;
+            }
+            timers[type].running = false;
+            if (finalLatencyMs !== undefined) {
+                timers[type].element.innerText = (finalLatencyMs / 1000).toFixed(2) + 's';
             }
         }
 
-        function checkMismatch() {
-            // Only compare if both have finished the current round
-            if (!pendingA && !pendingB && currentCommandA && currentCommandB) {
-                if (currentCommandA !== currentCommandB) {
-                    document.getElementById('panel-a').classList.add('mismatch');
-                    document.getElementById('panel-b').classList.add('mismatch');
-                } else {
-                    document.getElementById('panel-a').classList.remove('mismatch');
-                    document.getElementById('panel-b').classList.remove('mismatch');
-                }
-            }
+        function setMovement(sideId, command) {
+            const side = document.getElementById(sideId);
+            // Clear previous movement
+            side.classList.remove('moving-forward', 'moving-backward', 'moving-left', 'moving-right');
+            
+            if (command === 'stop') return;
+            
+            side.classList.add(`moving-${command.toLowerCase()}`);
         }
+
+        let lastCmdASR = "";
+        let lastCmdAcoustic = "";
 
         ws.onmessage = (event) => {
             const data = JSON.parse(event.data);
             
             if (data.pipeline === "A") {
-                // Pipeline A (Whisper) finished
-                document.getElementById('status-a').innerText = "Complete";
-                document.getElementById('status-a').classList.remove('processing-text');
-                document.getElementById('cmd-a').innerText = data.command.toUpperCase();
-                document.getElementById('conf-a').innerText = (data.confidence * 100).toFixed(1);
-                document.getElementById('lat-a').innerText = data.latency_ms;
-                if(data.transcription) document.getElementById('transcription-a').innerText = `"${data.transcription}"`;
-                moveRobot('robot-a', data.command);
-                currentCommandA = data.command;
-                pendingA = false;
+                // ASR
+                stopTimer('asr', data.latency_ms);
+                document.getElementById('cmd-asr').innerText = data.command.toUpperCase();
+                document.getElementById('conf-asr').innerText = (data.confidence * 100).toFixed(1);
+                
+                if (data.transcription) {
+                    const t = document.getElementById('transcription');
+                    t.innerText = `"${data.transcription}"`;
+                    t.style.display = 'block';
+                }
+                
+                setMovement('side-asr', data.command);
+                lastCmdASR = data.command;
             } else {
-                // Pipeline B (Acoustic) finished
-                document.getElementById('status-b').innerText = "Complete";
-                document.getElementById('status-b').classList.remove('processing-text');
-                document.getElementById('cmd-b').innerText = data.command.toUpperCase();
-                document.getElementById('conf-b').innerText = (data.confidence * 100).toFixed(1);
-                document.getElementById('lat-b').innerText = data.latency_ms;
-                moveRobot('robot-b', data.command);
-                currentCommandB = data.command;
-                pendingB = false;
+                // Acoustic
+                stopTimer('acoustic', data.latency_ms);
+                document.getElementById('cmd-acoustic').innerText = data.command.toUpperCase();
+                document.getElementById('conf-acoustic').innerText = (data.confidence * 100).toFixed(1);
+                
+                setMovement('side-acoustic', data.command);
+                lastCmdAcoustic = data.command;
             }
 
-            checkMismatch();
-
-            // Log entry
-            const entry = document.createElement('div');
-            entry.className = 'log-entry';
-            entry.innerHTML = `[${new Date().toLocaleTimeString()}] <b>Pipeline ${data.pipeline}</b>: ${data.command} in ${data.latency_ms}ms (Conf: ${(data.confidence*100).toFixed(1)}%)`;
-            log.prepend(entry);
+            // Mismatch detection
+            if (!timers.asr.running && !timers.acoustic.running && lastCmdASR && lastCmdAcoustic) {
+                if (lastCmdASR !== lastCmdAcoustic) {
+                    document.getElementById('mismatch').style.display = 'block';
+                } else {
+                    document.getElementById('mismatch').style.display = 'none';
+                }
+            }
         };
 
         // Mic Capture
@@ -261,20 +377,19 @@
                 const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
                 if (ws.readyState === WebSocket.OPEN) ws.send(audioBlob);
                 
-                // Visual Reset & Start Processing
-                pendingA = true;
-                pendingB = true;
-                document.getElementById('panel-a').classList.remove('mismatch');
-                document.getElementById('panel-b').classList.remove('mismatch');
+                // Start Timers
+                startTimer('asr');
+                startTimer('acoustic');
                 
-                document.getElementById('status-a').innerText = "Processing...";
-                document.getElementById('status-a').classList.add('processing-text');
-                document.getElementById('status-b').innerText = "Processing...";
-                document.getElementById('status-b').classList.add('processing-text');
+                // Clear UI
+                document.getElementById('transcription').style.display = 'none';
+                document.getElementById('mismatch').style.display = 'none';
                 
                 audioChunks = [];
             };
-        }).catch(err => alert("Microphone required for demo."));
+        }).catch(err => {
+            console.warn("Microphone access denied. Using simulated mode.");
+        });
 
         btn.addEventListener('mousedown', () => {
             if (mediaRecorder && mediaRecorder.state === "inactive") {
@@ -292,6 +407,26 @@
                 setTimeout(() => { if (!btn.classList.contains('recording')) btn.innerText = "HOLD TO COMMAND"; }, 1500);
             }
         });
+
+        // Simulation for testing without mic/server
+        function simulateCommand(cmd) {
+            startTimer('asr');
+            startTimer('acoustic');
+            
+            // Randomly delay ASR more
+            setTimeout(() => {
+                const data = { pipeline: "B", command: cmd, confidence: 0.98, latency_ms: 120 };
+                const event = { data: JSON.stringify(data) };
+                ws.onmessage(event);
+            }, 120);
+
+            setTimeout(() => {
+                const data = { pipeline: "A", command: cmd, confidence: 0.95, transcription: cmd, latency_ms: 850 };
+                const event = { data: JSON.stringify(data) };
+                ws.onmessage(event);
+            }, 850);
+        }
+
     </script>
 </body>
 </html>

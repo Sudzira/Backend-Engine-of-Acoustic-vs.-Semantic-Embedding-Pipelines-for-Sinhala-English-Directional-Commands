@@ -16,14 +16,14 @@ Thumbs.db
 
 # Large Model Weights (ENABLED)
 # We are now including .pt, .pth, and .bin files as requested
-# *.pt
-# *.pth
-# *.bin
+*.pt
+*.pth
+*.bin
 
 # Large Audio/Archive Files (ENABLED)
 # We are now including .wav and .mp3 files as requested
-# *.wav
-# *.mp3
+*.wav
+*.mp3
 
 # Ignore generic archives and huge system files
 *.zip
@@ -49,3 +49,8 @@ Thumbs.db
 # Ignore local IDE settings
 .vscode/
 .idea/
+
+# Project specific ignores
+acoustic_pipeline/data/raw/*
+asr_pipeline/data/raw/*
+dashboard_python/
